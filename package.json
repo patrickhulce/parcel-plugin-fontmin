@@ -1,0 +1,39 @@
+{
+  "name": "parcel-plugin-fontmin",
+  "version": "0.0.0-development",
+  "description": "Remove unused font glyphs from parcel assets.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "node ./test/fixtures/run.js test/fixtures/simple.html",
+    "clean": "find . -type d -name .cache -delete",
+    "test": "npm run test:lint && npm run test:unit",
+    "test:unit": "jest",
+    "test:lint": "lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patrickhulce/parcel-plugin-fontmin.git"
+  },
+  "author": "Patrick Hulce <patrick.hulce@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/patrickhulce/parcel-plugin-fontmin#readme",
+  "bugs": {
+    "url": "https://github.com/patrickhulce/parcel-plugin-fontmin/issues"
+  },
+  "devDependencies": {
+    "@patrickhulce/lint": "^3.0.2",
+    "font-awesome": "^4.7.0",
+    "jest": "^23.4.1",
+    "parcel-bundler": "^1.9.7"
+  },
+  "peerDependencies": {
+    "parcel-bundler": "^1.9.7"
+  },
+  "dependencies": {
+    "fontmin": "^0.9.7-beta",
+    "jsdom": "^11.11.0",
+    "lodash": "^4.17.10",
+    "parcel-plugin-nukecss": "file:../parcel-plugin-nukecss",
+    "wawoff2": "^1.0.2"
+  }
+}
